@@ -1,0 +1,22 @@
+using System;
+
+public class ArrayReverser {
+    public static void ReverseArray(int[] array) {
+        int left = 0;
+        int right = array.Length - 1;
+        while (left < right) {
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+            left++;
+            right--;
+        }
+    }
+
+    public static void Main(string[] args) {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        Console.WriteLine("Original array: " + string.Join(", ", numbers));
+        ReverseArray(numbers);
+        Console.WriteLine("Reversed array: " + string.Join(", ", numbers));
+    }
+}
